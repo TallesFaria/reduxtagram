@@ -11,7 +11,7 @@ import store, { history } from './store'
 import Raven from 'raven-js'
 import { sentry_url, logException } from './data/config'
 
-Raven.config(sentry_url, {
+/*Raven.config(sentry_url, {
     tags: {
         git_commit: '', 
         user_level:'editor'
@@ -25,6 +25,9 @@ logException(new Error('download failed!'), {
 Raven.captureMessage('Something went wrong!')
 
 Raven.showReportDialog()
+
+*/
+
 const router = (
     <Provider store={store}>
         <Router history={history}>
